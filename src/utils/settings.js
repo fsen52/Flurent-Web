@@ -1,6 +1,6 @@
 export const settings = {
   apiURL: "",
-  siteName: "",
+  siteName: "Flurent Website",
   siteUrl: "",
   email: "",
   phone1: "",
