@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/Flurent-Web/static/css/main.7a722a43.css",
-    "main.js": "/Flurent-Web/static/js/main.25d15c61.js",
+    "main.css": "/Flurent-Web/static/css/main.b0d7388f.css",
+    "main.js": "/Flurent-Web/static/js/main.24fd4ed3.js",
     "static/js/787.79de6fc4.chunk.js": "/Flurent-Web/static/js/787.79de6fc4.chunk.js",
+    "static/media/slider1.png": "/Flurent-Web/static/media/slider1.4526edccfb5932a5ee8d.png",
+    "static/media/slider2.png": "/Flurent-Web/static/media/slider2.84afa47d03028e4b285e.png",
+    "static/media/slider-bg2.jpeg": "/Flurent-Web/static/media/slider-bg2.e5cb36f422511dc1a983.jpeg",
+    "static/media/slider-bg.jpeg": "/Flurent-Web/static/media/slider-bg.1974d80a959d72d5a2d2.jpeg",
+    "static/media/mobile.png": "/Flurent-Web/static/media/mobile.a0475bf78df5d66676d0.png",
+    "static/media/slider-bg.jpg": "/Flurent-Web/static/media/slider-bg.7a0dc7b8a7032d082648.jpg",
+    "static/media/google-play.svg": "/Flurent-Web/static/media/google-play.e6493904327fe3f9b89c7c75a4f3ae74.svg",
+    "static/media/app-store.svg": "/Flurent-Web/static/media/app-store.35481c6295b0744dfcc00d35874fbdd8.svg",
     "index.html": "/Flurent-Web/index.html",
-    "main.7a722a43.css.map": "/Flurent-Web/static/css/main.7a722a43.css.map",
-    "main.25d15c61.js.map": "/Flurent-Web/static/js/main.25d15c61.js.map",
+    "main.b0d7388f.css.map": "/Flurent-Web/static/css/main.b0d7388f.css.map",
+    "main.24fd4ed3.js.map": "/Flurent-Web/static/js/main.24fd4ed3.js.map",
     "787.79de6fc4.chunk.js.map": "/Flurent-Web/static/js/787.79de6fc4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a722a43.css",
-    "static/js/main.25d15c61.js"
+    "static/css/main.b0d7388f.css",
+    "static/js/main.24fd4ed3.js"
   ]
 }
