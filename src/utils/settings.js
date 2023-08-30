@@ -2,8 +2,8 @@ export const settings = {
   apiURL: "",
   siteName: "Flurent Website",
   siteUrl: "",
-  email: "",
-  phone1: "",
-  address: "",
+  email: " flurent@mail.com",
+  phone1: " +49 123 45698754",
+  address: " Address Straße 123",
   mapEmbedUrl: "",
 };

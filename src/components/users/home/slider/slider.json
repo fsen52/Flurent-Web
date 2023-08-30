@@ -1,0 +1,18 @@
+[
+    {
+        "title" : " Car rent service in your city",
+        "description" : "We offer luxury car for your comfort",
+        "buttonText" : "Enjoy now",
+        "buttonLink" : "",
+        "image" : "slider1.png"
+    },
+    
+    {
+        "title" : " Live quality with us",
+        "description" : "When and what you need",
+        "buttonText" : "Rent now",
+        "buttonLink" : "",
+        "image" : "slider2.png"
+    }
+
+]
