@@ -9,7 +9,7 @@ import UserMenu from "./user-menu";
 
 const Header = () => {
   return (
-  <Navbar expand="lg" className="sticky-top main-navbar" >
+  <Navbar expand="lg" className="sticky-top main-navbar bg-white" >
       <Container >
         <Navbar.Brand as={Link} to="/" title={settings.siteName}><img src={logo} alt={settings.siteName} />
         </Navbar.Brand>
