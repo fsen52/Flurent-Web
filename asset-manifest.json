@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Flurent-Web/static/css/main.b0d7388f.css",
-    "main.js": "/Flurent-Web/static/js/main.24fd4ed3.js",
+    "main.js": "/Flurent-Web/static/js/main.37a4a638.js",
     "static/js/787.79de6fc4.chunk.js": "/Flurent-Web/static/js/787.79de6fc4.chunk.js",
     "static/media/slider1.png": "/Flurent-Web/static/media/slider1.4526edccfb5932a5ee8d.png",
     "static/media/slider2.png": "/Flurent-Web/static/media/slider2.84afa47d03028e4b285e.png",
@@ -13,11 +13,11 @@
     "static/media/app-store.svg": "/Flurent-Web/static/media/app-store.35481c6295b0744dfcc00d35874fbdd8.svg",
     "index.html": "/Flurent-Web/index.html",
     "main.b0d7388f.css.map": "/Flurent-Web/static/css/main.b0d7388f.css.map",
-    "main.24fd4ed3.js.map": "/Flurent-Web/static/js/main.24fd4ed3.js.map",
+    "main.37a4a638.js.map": "/Flurent-Web/static/js/main.37a4a638.js.map",
     "787.79de6fc4.chunk.js.map": "/Flurent-Web/static/js/787.79de6fc4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b0d7388f.css",
-    "static/js/main.24fd4ed3.js"
+    "static/js/main.37a4a638.js"
   ]
 }
