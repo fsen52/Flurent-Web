@@ -1,5 +1,5 @@
 export const settings = {
-  apiURL: "",
+  apiURL: "http://localhost:8080",
   siteName: "Flurent Website",
   siteUrl: "",
   email: " flurent@mail.com",

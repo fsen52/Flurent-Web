@@ -8,31 +8,21 @@ import "./user-menu.scss";
 
 const UserMenu = () => {
 
-
     const {isUserLogin, user}= useSelector(state=> state.auth);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
-
 
     const handleLogout = () => { 
        
        question("Are you sure to logout?").then((result) => {
        if(result.isConfirmed){
           dispatch(logout());
-      
           //clean local storage
-          
           navigate("/");
         }
       })
-                
     };      
-    
-
-    
-
 
   return (
     <div className="user-menu">

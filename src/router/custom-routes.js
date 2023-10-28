@@ -4,7 +4,7 @@ import HomePage from "../pages/users/home-page";
 import UserTemplate from "../templates/user-template";
 import AboutPage from "../pages/users/about-page";
 import ContactPage from "../pages/users/contact-page";
-import PrivacyPolicyPage from "../pages/users/privacy-policy";
+import PrivacyPolicyPage from "../pages/users/privacy-policy-page";
 import VehiclesPage from "../pages/users/vehicles-page";
 import VehicleDetailsPage from "../pages/users/vehicle-details-page";
 import NotFoundPage from "../pages/common/not-found-page";

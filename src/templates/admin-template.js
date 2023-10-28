@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Sidebar from "../components/admins/common/sidebar/sidebar";
 
 const AdminTemplate = (props) => {
