@@ -16,6 +16,7 @@ const CustomRoutes = () => {
       <Routes>
         <Route path="/">
           <Route index element={<UserTemplate><HomePage /></UserTemplate>}/>
+          <Route path="Flurent-Web" element={<UserTemplate><HomePage /></UserTemplate>}/>
           <Route path="about" element={<UserTemplate><AboutPage /></UserTemplate>}/>
           <Route path="contact" element={<UserTemplate><ContactPage /></UserTemplate>}/>
           <Route path="privacy-policy" element={<UserTemplate><PrivacyPolicyPage /></UserTemplate>}/>
