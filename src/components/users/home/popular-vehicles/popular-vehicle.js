@@ -34,7 +34,7 @@ const PopularVehicle = (props) => {
             <li><MdOutlineAirlineSeatReclineExtra/>Seats: {seats}</li>
             <li><RiCaravanLine/>Luggage: {luggage}</li>
             <li><GiJoystick/>Transmission: {transmission}</li>
-            <li><IoIosSnow/>Air Conditioning: {airConditioning}</li>
+            <li><IoIosSnow/>Air Conditioning: {airConditioning?"Available":"Not available"}</li>
             <li><RiGasStationFill/>Fuel Type: {fuelType}</li>
             <li><GiCalendarHalfYear/>Year: {year}</li>
           </ul>
