@@ -20,11 +20,30 @@ const VehicleBar = (props) => {
   return (
     
     <Container className="vehicle-bar">
-        <div className='arrow-left' onClick={handlePrev}><IoIosArrowDropleft/></div>
+        <div className='arrow' onClick={handlePrev}><IoIosArrowDropleft/></div>
         <Swiper 
         ref={swiperRef}
-        spaceBetween={20}
-        slidesPerView={3}
+        breakpoints={{
+            0:{
+                spaceBetween:10,
+                slidesPerView:1
+            },
+            576:{
+                spaceBetween:20,
+                slidesPerView:2
+            },
+            768:{
+                spaceBetween:20,
+                slidesPerView:3
+            },
+
+             992:{
+                spaceBetween:20,
+                slidesPerView:5
+            } 
+        }}
+
+        
         
         /*
         onSlideChange={()=> console.log("slide change")}
@@ -42,7 +61,7 @@ const VehicleBar = (props) => {
             {vehicle.model} </SwiperSlide>))}
         </Swiper>
 
-        <div className='arrow-right' onClick={handleNext}><IoIosArrowDropright/></div>
+        <div className='arrow' onClick={handleNext}><IoIosArrowDropright/></div>
     </Container>
 
 
