@@ -41,4 +41,11 @@
                 box-shadow: 0 0 10px v.$color1;
             }
     }
+
+    .passive{
+        color: v.$color4;
+        box-shadow: 0 0 10px v.$color4;
+        cursor: auto;
+        pointer-events: none;
+    }
 }
