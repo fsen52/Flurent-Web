@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/Flurent-Web/static/css/main.dbe76f07.css",
-    "main.js": "/Flurent-Web/static/js/main.1134790b.js",
+    "main.css": "/Flurent-Web/static/css/main.bdcd050d.css",
+    "main.js": "/Flurent-Web/static/js/main.76ed6bbb.js",
     "static/js/787.79de6fc4.chunk.js": "/Flurent-Web/static/js/787.79de6fc4.chunk.js",
     "static/media/slider1.png": "/Flurent-Web/static/media/slider1.4526edccfb5932a5ee8d.png",
     "static/media/slider2.png": "/Flurent-Web/static/media/slider2.84afa47d03028e4b285e.png",
+    "static/media/login-bg.jpeg": "/Flurent-Web/static/media/login-bg.059f2da554e19bc90cfd.jpeg",
+    "static/media/page-header-bg.jpeg": "/Flurent-Web/static/media/page-header-bg.fb5614919a86ca48b4ae.jpeg",
     "static/media/slider-bg2.jpeg": "/Flurent-Web/static/media/slider-bg2.e5cb36f422511dc1a983.jpeg",
     "static/media/slider-bg.jpeg": "/Flurent-Web/static/media/slider-bg.1974d80a959d72d5a2d2.jpeg",
     "static/media/mobile.png": "/Flurent-Web/static/media/mobile.a0475bf78df5d66676d0.png",
@@ -12,12 +14,12 @@
     "static/media/google-play.svg": "/Flurent-Web/static/media/google-play.e6493904327fe3f9b89c7c75a4f3ae74.svg",
     "static/media/app-store.svg": "/Flurent-Web/static/media/app-store.35481c6295b0744dfcc00d35874fbdd8.svg",
     "index.html": "/Flurent-Web/index.html",
-    "main.dbe76f07.css.map": "/Flurent-Web/static/css/main.dbe76f07.css.map",
-    "main.1134790b.js.map": "/Flurent-Web/static/js/main.1134790b.js.map",
+    "main.bdcd050d.css.map": "/Flurent-Web/static/css/main.bdcd050d.css.map",
+    "main.76ed6bbb.js.map": "/Flurent-Web/static/js/main.76ed6bbb.js.map",
     "787.79de6fc4.chunk.js.map": "/Flurent-Web/static/js/787.79de6fc4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbe76f07.css",
-    "static/js/main.1134790b.js"
+    "static/css/main.bdcd050d.css",
+    "static/js/main.76ed6bbb.js"
   ]
 }
