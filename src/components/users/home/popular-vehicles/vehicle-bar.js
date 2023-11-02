@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, {useRef, useState } from 'react'
 import { Container } from 'react-bootstrap';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";

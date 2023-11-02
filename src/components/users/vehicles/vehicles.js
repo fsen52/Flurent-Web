@@ -5,6 +5,7 @@ import { getVehiclesByPage } from '../../../api/vehicle-service';
 import VehicleCard from './vehicle-card';
 import Spacer from '../../common/spacer/spacer';
 import Loading from '../../common/loading/loading';
+import "./vehicles.scss";
 
 const Vehicles = () => {
   const [vehicles, setVehicles] = useState([]);
@@ -29,7 +30,7 @@ const Vehicles = () => {
   useEffect(() => {
     loadData()
   
-  }, []);
+  },[] );
   
   
     return (
@@ -48,8 +49,8 @@ const Vehicles = () => {
             </Row>
         
             {paginition.totalPages > 1 && ( 
-                <Row className='mt-5 justify-content-center'>
-                    <Pagination style={{width:"auto", minWidth:0}}>
+                <Row className='vehicles-pagination'>
+                    <Pagination >
                         <Pagination.First onClick={()=> loadData(0)} 
                             disabled={paginition.pageable.pageNumber <=0}/>
                         <Pagination.Prev onClick={()=> loadData(paginition.pageable.pageNumber-1)} 

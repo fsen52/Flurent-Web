@@ -1,9 +1,11 @@
 import { useFormik } from 'formik';
 import React, { useState } from 'react'
-import { Button, Form } from 'react-bootstrap'
+import { Button, Form, Spinner } from 'react-bootstrap'
 import ReactInputMask from 'react-input-mask-next';
 import * as Yup from "yup"
 import PasswordInput from './password-input';
+import { register } from '../../../../api/user-service';
+import { toast } from '../../../../utils/functions/swal';
 
 const RegisterForm = ({setDefaultTab}) => {
 
@@ -30,6 +32,7 @@ const RegisterForm = ({setDefaultTab}) => {
                                 .min(8, "Must be at least 8 characters")
                                 .matches(/[a-z]+/, "Must be at least one lowercase")
                                 .matches(/[A-Z]+/, "Must be at least one lowercase")
+                                .matches(/[@$!%*#?&]+/, "Must be at least one special character")
                                 .matches(/\d+/,"Must be at least one digit"),
         confirmPassword : Yup.string().required("Please re-enter your password")
                                 .oneOf([Yup.ref("password")] , "Please enter same password"),
@@ -38,6 +41,17 @@ const RegisterForm = ({setDefaultTab}) => {
 
     const onSubmit = async (values)=>{
 
+      setLoading(true);
+      try {
+        await register(values);
+        toast("success", "You are registered successfully.")
+        formik.resetForm();
+        setDefaultTab("login");
+      } catch (err) {
+        toast("error", err.response.data.message)  
+      } finally{
+        setLoading(false);
+      }
     }
 
     const formik = useFormik({
@@ -94,10 +108,10 @@ const RegisterForm = ({setDefaultTab}) => {
         <Form.Label>Zip Code</Form.Label>
         <Form.Control
         type='text'
-        {...formik.getFieldProps("zipcode")} 
-        isInvalid={formik.touched.zipcode && formik.errors.zipcode}
-        isValid={formik.touched.zipcode && !formik.errors.zipcode}/>
-        <Form.Control.Feedback>{formik.errors.zipcode}</Form.Control.Feedback>
+        {...formik.getFieldProps("zipCode")} 
+        isInvalid={formik.touched.zipCode && formik.errors.zipCode}
+        isValid={formik.touched.zipCode && !formik.errors.zipCode}/>
+        <Form.Control.Feedback>{formik.errors.zipCode}</Form.Control.Feedback>
       </Form.Group>
 
       <Form.Group className="mb-3" >
@@ -132,7 +146,8 @@ const RegisterForm = ({setDefaultTab}) => {
 
 
     
-    <Button variant='primary' type='submit'>Register</Button>
+    <Button variant='primary' type='submit' disabled={loading} >
+        {loading && <Spinner animation='border' size='sm'/>} Register</Button>
 </Form>
   )
 }

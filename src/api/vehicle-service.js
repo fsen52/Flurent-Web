@@ -9,9 +9,14 @@ const getVehicles = () => {
 
 };
 
+const getVehicle = (id) => {
+    return axios.get(`${API_URL}/car/visitors/${id}`);
+
+};
+
 const getVehiclesByPage = (page=0, size=10, sort="model", direction="ASC")=> {
     return axios.get(`${API_URL}/car/visitors/pages?page=${page}&size=${size}&sort=${sort}&direction=${direction}`);
 
 }
 
-export {getVehicles, getVehiclesByPage};
+export {getVehicles, getVehicle, getVehiclesByPage};

@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Card } from 'react-bootstrap';
 import { getVehicleImage } from '../../../utils/functions/vehicle-functions';
 import "./vehicle-card.scss";
+import { Link } from 'react-router-dom';
 
 const VehicleCard = (props) => {
     //TODO "id" must change with "carId" 
@@ -17,8 +18,8 @@ const VehicleCard = (props) => {
             </Card.Text>
         </Card.Body>
         <Card.Footer>
-            <Button variant='dark'>Rent a Car</Button>
-            <Button variant='primary'>Details</Button>
+            <Button variant='dark' as={Link} to={`/vehicles/${id}`} >Rent a Car</Button>
+            <Button variant='primary' as={Link} to={`/vehicles/${id}`}>Details</Button>
         </Card.Footer>
     </Card>
   )

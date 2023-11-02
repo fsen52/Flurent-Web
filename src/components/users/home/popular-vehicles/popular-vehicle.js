@@ -8,13 +8,14 @@ import {MdOutlineAirlineSeatReclineExtra} from "react-icons/md";
 import {GiJoystick, GiCalendarHalfYear} from "react-icons/gi";
 import Spacer from '../../../common/spacer/spacer';
 import { getVehicleImage } from '../../../../utils/functions/vehicle-functions';
+import { Link } from 'react-router-dom';
 
 
 
 const PopularVehicle = (props) => {
   
   const {activeVehicle} = props;
-  const {image, model, year, airConditioning, doors, fuelType, luggage, pricePerHour, seats, transmission } = activeVehicle;
+  const {id, image, model, year, airConditioning, doors, fuelType, luggage, pricePerHour, seats, transmission } = activeVehicle;
   
   return ( 
     <Container className='popular-vehicle'>
@@ -40,7 +41,7 @@ const PopularVehicle = (props) => {
           <li><GiCalendarHalfYear/>Year: {year}</li>
         </ul>
         <Spacer height={50}/>
-        <Button variant="primary">Rent Now</Button>
+        <Button variant="primary" as={Link} to={`/vehicles/${id}`}>Rent Now</Button>
        </Col>
     </Row>):(<></>)}</div>
     
