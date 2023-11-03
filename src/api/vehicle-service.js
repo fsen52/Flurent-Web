@@ -19,4 +19,9 @@ const getVehiclesByPage = (page=0, size=10, sort="model", direction="ASC")=> {
 
 }
 
-export {getVehicles, getVehicle, getVehiclesByPage};
+const getVehicleImage = (id) => { 
+    if(Array.isArray(id))id=id[0];
+    return axios.get(`${settings.apiURL}/files/display/${id}`, {responseType:"arraybuffer"})
+ }
+
+export {getVehicles, getVehicle, getVehiclesByPage, getVehicleImage};

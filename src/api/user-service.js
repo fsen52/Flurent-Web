@@ -20,4 +20,16 @@ const register = (user) => {
 
   }
 
- export {register, login, getUser};
+  const updateUser = (user) => { 
+
+   return axios.put(`${API_URL}/user`, user, {headers: authHeader()});
+
+ }
+
+ const updatePassword = (passwords) => { 
+
+   return axios.patch(`${API_URL}/user/auth`, passwords, {headers: authHeader()});
+
+ }
+
+ export {register, login, getUser, updateUser, updatePassword};

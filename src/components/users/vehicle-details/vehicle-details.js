@@ -16,6 +16,7 @@ const VehicleDetails = () => {
   const {image, model, age, airConditioning, doors, 
     fuelType, luggage, pricePerHour, seats, transmission } = vehicle;
 
+
   return (
     <Container className='vehicle-details'>
       <Row className='g-5'>
