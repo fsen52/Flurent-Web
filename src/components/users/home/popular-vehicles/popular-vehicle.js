@@ -18,7 +18,8 @@ const PopularVehicle = (props) => {
   const [loading, setLoading] = useState(false);
   const [imageSrc, setImageSrc] = useState("");
   const {activeVehicle} = props;
-  const {id, image, model, age, airConditioning, doors, fuelType, luggage, pricePerHour, seats, transmission } = activeVehicle;
+  //TODO "id" must change with "carId" 
+  const {carId, image, model, age, airConditioning, doors, fuelType, luggage, pricePerHour, seats, transmission } = activeVehicle;
   
   const loadImage = async() => { 
     setLoading(true);
@@ -65,7 +66,7 @@ const PopularVehicle = (props) => {
           <li><GiCalendarHalfYear/>Year: {age}</li>
         </ul>
         <Spacer height={50}/>
-        <Button variant="primary" as={Link} to={`/vehicles/${id}`}>Rent Now</Button>
+        <Button variant="primary" as={Link} to={`/vehicles/${carId}`}>Rent Now</Button>
        </Col>
     </Row>):(<></>)}</div>
     

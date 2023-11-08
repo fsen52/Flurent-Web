@@ -15,7 +15,7 @@ const VehicleDetails = () => {
   const vehicle =  useSelector((state) => state.reservation.vehicle);
   const {image, model, age, airConditioning, doors, 
     fuelType, luggage, pricePerHour, seats, transmission } = vehicle;
-
+console.log(vehicle);
 
   return (
     <Container className='vehicle-details'>

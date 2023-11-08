@@ -1,7 +1,19 @@
-import React from "react";
+import React from 'react'
+import PageHeader from '../../components/users/common/page-header/page-header'
+import Spacer from '../../components/common/spacer/spacer'
+import Profile from '../../components/users/profile/profile'
 
 const ProfilePage = () => {
-  return <div>ProfilePage</div>;
-};
+  return (
+    <>
 
-export default ProfilePage;
+      <PageHeader title="Profile" />
+      <Spacer/>
+      <Profile/>
+      <Spacer/>
+
+    </>
+  )
+}
+
+export default ProfilePage

@@ -1,6 +1,6 @@
 export const settings = {
-  //apiURL: "http://localhost:8080",
-  apiURL: "https://carrental-v3-backend.herokuapp.com",
+  apiURL: "http://localhost:8080",
+  //apiURL: "https://carrental-v3-backend.herokuapp.com",
   siteName: "Flurent Website",
   siteUrl: "",
   email: " flurent@mail.com",

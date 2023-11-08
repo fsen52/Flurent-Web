@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const VehicleCard = (props) => {
     //TODO "id" must change with "carId" 
-  const { id, model, image, pricePerHour } = props;
+  const { carId, model, image, pricePerHour } = props;
   
     return (
     <Card className="vehicle-card">
@@ -18,8 +18,8 @@ const VehicleCard = (props) => {
             </Card.Text>
         </Card.Body>
         <Card.Footer>
-            <Button variant='dark' as={Link} to={`/vehicles/${id}`} >Rent a Car</Button>
-            <Button variant='primary' as={Link} to={`/vehicles/${id}`}>Details</Button>
+            <Button variant='dark' as={Link} to={`/vehicles/${carId}`} >Rent a Car</Button>
+            <Button variant='primary' as={Link} to={`/vehicles/${carId}`}>Details</Button>
         </Card.Footer>
     </Card>
   )

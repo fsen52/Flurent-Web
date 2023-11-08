@@ -27,8 +27,8 @@ const BookingForm = () => {
         try {
 
             if(!checkDates(formik.values)) throw new Error("Drop-off date cannot be before pick-up date")
-
-            const dto = {carId:vehicle.id, pickUpDateTime: combineDateTime(pickUpDate,pickUpTime), 
+            //TODO "id" must change with "carId" 
+            const dto = {carId:vehicle.carId, pickUpDateTime: combineDateTime(pickUpDate,pickUpTime), 
                         dropOffDateTime: combineDateTime(dropOffDate,dropOffTime)};
 
             const resp = await isVehicleAvailable(dto);
@@ -87,7 +87,8 @@ const BookingForm = () => {
                 pickUpLocation,
                 dropOffLocation
             }
-            await createReservation(vehicle.id, dto);
+            //TODO "id" must change with "carId" 
+            await createReservation(vehicle.carId, dto);
             toast("success", "Reservation created")
             formik.resetForm()
             navigate("/");

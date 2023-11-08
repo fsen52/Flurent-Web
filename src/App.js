@@ -3,15 +3,18 @@ import CustomRoutes from "./router/custom-routes";
 import secureLocalStorage from "react-secure-storage";
 import { getUser } from "./api/user-service";
 import { loginFailed, loginSuccess } from "./store/slices/auth-slice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import LoadingPage from "./pages/common/loading-page";
 
 function App() {
+
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   
   const loadData = async() => {
     try {
       
-      const token = secureLocalStorage.getItem("token");
+      let token = secureLocalStorage.getItem("token");
     
       
       if(token){
@@ -23,18 +26,20 @@ function App() {
       
       dispatch(loginFailed())
 
+    } finally{
+      setLoading(false);
     }
    }
 
    useEffect(() => {
      loadData()
    
-   }, [])
+   }, []);
    
   
   return (
-    <>
-      <CustomRoutes />
+    <> 
+      {loading ? <LoadingPage/> : <CustomRoutes/>}
     </>
   );
 }

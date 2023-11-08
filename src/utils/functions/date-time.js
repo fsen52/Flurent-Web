@@ -1,7 +1,7 @@
 import moment from "moment";
 
 export const combineDateTime = (date,time) => { 
-    return moment(`${date} ${time}`).format("MM/DD/YYYY HH:mm:ss");
+    return moment(`${date} ${time}`).format("DD/MM/YYYY HH:mm:ss");
  }
 
 export const checkExpireDate = (expireDate) => {
@@ -28,4 +28,8 @@ export const checkDates = (dates) => {
     const endDate = moment(`${dropOffDate} ${dropOffTime}`);
 
     return endDate>startDate.add(1,"h");
+}
+
+export const formatDateTimeLLL = (dateTime)=>{
+    return moment(dateTime).format("lll");
 }

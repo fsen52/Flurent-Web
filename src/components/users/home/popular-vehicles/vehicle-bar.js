@@ -65,9 +65,9 @@ const VehicleBar = (props) => {
         <SwiperSlide 
 
         //TODO all "id" in here must change with "carId"
-        key= {vehicle.id} 
+        key= {vehicle.carId} 
 
-        className={vehicle.id === activeVehicle.id ? "active" : "" } 
+        className={vehicle.carId === activeVehicle.carId ? "active" : "" } 
         onClick={()=>setActiveVehicle(vehicle)}
         >
             {vehicle.model} </SwiperSlide>))}

@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import secureLocalStorage from "react-secure-storage";
 
 export const authSlice = createSlice({
     name:"auth",
@@ -20,10 +21,15 @@ export const authSlice = createSlice({
         logout: (state)=> {
             state.user={};
             state.isUserLogin=false;
+            secureLocalStorage.removeItem("token");
+        },
+
+        userUpdate: (state,action)=>{
+            state.user = action.payload;
         }
     }
 })
 
 
-export const {loginSuccess, loginFailed, logout} = authSlice.actions;
+export const {loginSuccess, loginFailed, logout, userUpdate} = authSlice.actions;
 export default authSlice.reducer;

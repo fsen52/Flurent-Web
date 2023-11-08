@@ -18,7 +18,6 @@ const Vehicles = () => {
                 const {content, numberOfElements, size, totalElements, totalPages, pageable} = resp.data;
                 setVehicles(content);
                 setPaginition({numberOfElements, size, totalElements, totalPages, pageable});
-                console.log(paginition);
             } catch (err) {
                 console.log(err);
             } finally{
@@ -42,7 +41,8 @@ const Vehicles = () => {
         <>
             <Row className='g-4'>
                 {vehicles.map(vehicle => 
-                <Col key={vehicle.id} sm={6} md={4} lg={3}><VehicleCard {...vehicle}/></Col> 
+                // TODO "id" must change with "carId" 
+                <Col key={vehicle.carId} sm={6} md={4} lg={3}><VehicleCard {...vehicle}/></Col> 
                 )}
             
             
