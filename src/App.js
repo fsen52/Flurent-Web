@@ -5,6 +5,7 @@ import { getUser } from "./api/user-service";
 import { loginFailed, loginSuccess } from "./store/slices/auth-slice";
 import { useEffect, useState } from "react";
 import LoadingPage from "./pages/common/loading-page";
+import { settings } from "./utils/settings";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
 
    useEffect(() => {
      loadData()
+     document.title = `${settings.siteName} | A Car Rental Project`
    
    }, []);
    

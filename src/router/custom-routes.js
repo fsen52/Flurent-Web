@@ -18,6 +18,8 @@ import ReservationDetailsPage from "../pages/users/reservation-details-page";
 import ScrollToTop from "../components/common/scroll-to-top/scroll-to-top";
 import AdminTemplate from "../templates/admin-template";
 import AdminDashboardPage from "../pages/admins/admin-dashboard-page";
+import AdminUsersPage from "../pages/admins/admin-users-page";
+import AdminUserEditPage from "../pages/admins/admin-user-edit-page";
 const CustomRoutes = () => {
   return (
     <BrowserRouter>
@@ -43,8 +45,13 @@ const CustomRoutes = () => {
           <Route path="auth" element={<UserTemplate><AuthPage /></UserTemplate>}/>
           <Route path="unauthorized" element={<UserTemplate><UnauthorizedPage /></UserTemplate>}/>
 
-          <Route path="admin">
-          <Route index element={<ProtectedRoute admin={true}><AdminTemplate><AdminDashboardPage/></AdminTemplate></ProtectedRoute>}/>
+          <Route path="rentadmin">
+              <Route index element={<ProtectedRoute admin={true}><AdminTemplate><AdminDashboardPage/></AdminTemplate></ProtectedRoute>}/>
+              <Route path="users">
+                  <Route index element={<ProtectedRoute admin={true}><AdminTemplate><AdminUsersPage/></AdminTemplate></ProtectedRoute>}/>
+                  <Route path=":userId" element={<ProtectedRoute admin={true}><AdminTemplate><AdminUserEditPage/></AdminTemplate></ProtectedRoute>}/>
+
+              </Route>
           </Route>
 
 

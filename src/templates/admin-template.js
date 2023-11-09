@@ -5,13 +5,13 @@ import Sidebar from "../components/admins/common/sidebar/sidebar";
 const AdminTemplate = (props) => {
   const { children } = props;
   return (
-    <Container fluid>
+    <Container fluid style={{padding:0}}>
       <Row>
         <Col lg={3}>
           <Sidebar />
         </Col>
         <Col lg={9}>
-          <Container>{children}</Container>
+          <Container className="pt-5">{children}</Container>
         </Col>
       </Row>
     </Container>
