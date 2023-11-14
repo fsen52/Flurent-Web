@@ -1,27 +1,68 @@
 import axios from "axios";
 import { settings } from "../utils/settings";
+import authHeader from "./auth-header";
 
 
 const API_URL = settings.apiURL;
 
-const getVehicles = () => {
+export const getVehicles = () => {
     return axios.get(`${API_URL}/car/visitors/all`);
 
 };
 
-const getVehicle = (id) => {
+export const getVehicle = (id) => {
     return axios.get(`${API_URL}/car/visitors/${id}`);
 
 };
 
-const getVehiclesByPage = (page=0, size=10, sort="model", direction="ASC")=> {
-    return axios.get(`${API_URL}/car/visitors/pages?page=${page}&size=${size}&sort=${sort}&direction=${direction}`);
+export const getVehiclesByPage = (page=0, size=10, sort="model", direction="ASC")=> {
+    return axios.get(
+        `${API_URL}/car/visitors/pages?page=${page}&size=${size}&sort=${sort}&direction=${direction}`);
 
 }
 
-const getVehicleImage = (id) => { 
+export const getVehicleImage = (id) => { 
     if(Array.isArray(id))id=id[0];
     return axios.get(`${settings.apiURL}/files/display/${id}`, {responseType:"arraybuffer"})
  }
 
-export {getVehicles, getVehicle, getVehiclesByPage, getVehicleImage};
+
+/* ADMIN SERVICES */
+
+export const downloadVehicles = () =>{
+    return axios.get(`${API_URL}/excel/download/cars`, {headers: {...authHeader(),
+          "Content-Type":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}, 
+          responseType:"blob"})
+  
+  }
+
+export const uploadVehicleImage = (image) => {
+    return axios.post(`${API_URL}/files/upload`,image, 
+    { headers: {...authHeader(), "Content-Type" : "multipart/form-data"}} )
+}
+
+export const createVehicle = (imageId, vehicle) => {
+    return axios.post(`${API_URL}/car/admin/${imageId}/add`, vehicle, {
+        headers: authHeader()
+    })
+}
+
+export const deleteVehicleById = (vehicleId) => {
+    return axios.delete(`${API_URL}/car/admin/${vehicleId}/auth`, {
+        headers: authHeader()
+    })
+}
+
+export const deleteVehicleImage = (imageId) => {
+    return axios.delete(`${API_URL}/files${imageId}/`, {
+        headers: authHeader()
+    })
+}
+
+
+export const updateVehicle = (imageId, vehicleId, vehicle) => {
+    return axios.put(`${API_URL}/car/admin/auth?id=${vehicleId}&imageId=${imageId}`, vehicle, {
+        headers: authHeader()
+    })
+}
+

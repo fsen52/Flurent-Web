@@ -13,9 +13,9 @@ import BookingForm from './booking-form'
 const VehicleDetails = () => {
 
   const vehicle =  useSelector((state) => state.reservation.vehicle);
-  const {image, model, age, airConditioning, doors, 
+  const {image, model, year, airConditioning, doors, 
     fuelType, luggage, pricePerHour, seats, transmission } = vehicle;
-console.log(vehicle);
+
 
   return (
     <Container className='vehicle-details'>
@@ -38,7 +38,7 @@ console.log(vehicle);
           <li><GiJoystick/>{transmission}</li>
           <li><IoIosSnow/>{airConditioning?"Available":"Not available"}</li>
           <li><RiGasStationFill/>{fuelType}</li>
-          <li><GiCalendarHalfYear/>{age} Years</li>
+          <li><GiCalendarHalfYear/>Years: {year}</li>
         </ul>
        </Col>
        <Col md={4}><BookingForm/> </Col> 

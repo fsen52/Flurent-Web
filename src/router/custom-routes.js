@@ -20,6 +20,9 @@ import AdminTemplate from "../templates/admin-template";
 import AdminDashboardPage from "../pages/admins/admin-dashboard-page";
 import AdminUsersPage from "../pages/admins/admin-users-page";
 import AdminUserEditPage from "../pages/admins/admin-user-edit-page";
+import AdminVehiclesPage from "../pages/admins/admin-vehicles-page";
+import AdminVehicleEditPage from "../pages/admins/admin-vehicle-edit-page";
+import AdminVehicleNewPage from "../pages/admins/admin-vehicle-new-page";
 const CustomRoutes = () => {
   return (
     <BrowserRouter>
@@ -50,6 +53,11 @@ const CustomRoutes = () => {
               <Route path="users">
                   <Route index element={<ProtectedRoute admin={true}><AdminTemplate><AdminUsersPage/></AdminTemplate></ProtectedRoute>}/>
                   <Route path=":userId" element={<ProtectedRoute admin={true}><AdminTemplate><AdminUserEditPage/></AdminTemplate></ProtectedRoute>}/>
+              </Route>  
+              <Route path="vehicles">
+                  <Route index element={<ProtectedRoute admin={true}><AdminTemplate><AdminVehiclesPage/></AdminTemplate></ProtectedRoute>}/>
+                  <Route path=":vehicleId" element={<ProtectedRoute admin={true}><AdminTemplate><AdminVehicleEditPage/></AdminTemplate></ProtectedRoute>}/>
+                  <Route path="new" element={<ProtectedRoute admin={true}><AdminTemplate><AdminVehicleNewPage/></AdminTemplate></ProtectedRoute>}/>   
 
               </Route>
           </Route>

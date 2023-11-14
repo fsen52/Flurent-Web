@@ -59,4 +59,14 @@ export const getUserById = (id) => {
 
 }
 
- 
+export const updateUserById = (id,user) => { 
+
+  return axios.put(`${API_URL}/user/${id}/auth/`, user, {headers: authHeader()});
+
+}
+
+export const deleteUserById = (id) => { 
+
+  return axios.delete(`${API_URL}/user/${id}/auth/`, {headers: authHeader()});
+
+} 

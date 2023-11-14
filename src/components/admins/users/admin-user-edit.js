@@ -5,7 +5,8 @@ import ReactInputMask from 'react-input-mask-next';
 import { useNavigate, useParams } from 'react-router-dom';
 import * as Yup from "yup";
 import Loading from '../../common/loading/loading';
-import { getUserById } from '../../../api/user-service';
+import { deleteUserById, getUserById, updateUserById } from '../../../api/user-service';
+import { question, toast } from '../../../utils/functions/swal';
 
 const AdminUserEdit = () => {
 
@@ -42,7 +43,25 @@ const AdminUserEdit = () => {
         password:Yup.string()
     })
 
-    const onSubmit =async (values) => {}
+    const onSubmit =async (values) => {
+        setSaving(true)
+
+        const data = {...values};
+        if(!data.password){
+            delete data.password;
+        }
+
+        try {
+            await updateUserById(userId, values);
+            toast("success", "User was updated")
+        } catch (err) {
+            toast("error", err.response.data.message)
+            
+        }finally{
+            setSaving(false);
+        }
+
+    }
 
     const formik=useFormik({
         initialValues,
@@ -64,9 +83,26 @@ const AdminUserEdit = () => {
         setLoading(false);
         }
     }
+    const removeUser = async() =>{
+        setDeleting(true)
+        try {
+            await deleteUserById(userId)
+            toast("success","User was deleted")
+            navigate("/rentadmin/users")
+        } catch (err) {
+            toast("error", err.response.data.message)
+        } finally {
+            setDeleting(false);
+        }
+    }
 
     const handleDelete = () => { 
-
+        question("Are you sure to delete this user?",
+            "This process cannot be reversed").then((result)=> {
+            if(result.isConfirmed){
+            removeUser();
+            }
+        })
      }
 
      useEffect(() => {
@@ -76,6 +112,7 @@ const AdminUserEdit = () => {
      
 
   return (
+    loading ? <Loading/> :
     (
 
     <Form noValidate onSubmit={formik.handleSubmit}>
