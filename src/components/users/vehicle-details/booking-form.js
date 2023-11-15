@@ -70,8 +70,8 @@ const BookingForm = () => {
         dropOffTime:Yup.string().required("Select a drop off time"),
         cardNo:Yup.string().required("Please Enter your card number"),
         nameOnCard:Yup.string().required("Please enter name on card"),
-        expireDate:Yup.string().required("Please your expire date").
-            test("month_check", "Enter a valid expire date (MM/YY)" , (value)=> checkExpireDate(value)),
+        expireDate:Yup.string().required("Please your expire date")
+            .test("month_check", "Enter a valid expire date (MM/YY)" , (value)=> checkExpireDate(value)),
         ccv:Yup.number().typeError("Must be number").required().min(1).max(999, "Please enter ccv"),
         contract:Yup.boolean().oneOf([true], "Please read the contract and check the box")
     })

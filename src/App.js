@@ -36,6 +36,7 @@ function App() {
      loadData()
      document.title = `${settings.siteName} | A Car Rental Project`
    
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    }, []);
    
   

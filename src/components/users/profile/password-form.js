@@ -1,7 +1,6 @@
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
 import { Button, Form, Spinner } from 'react-bootstrap'
-import ReactInputMask from 'react-input-mask-next'
 import * as Yup from "yup"
 import PasswordInput from '../common/password-input/password-input'
 import { updatePassword } from '../../../api/user-service'
@@ -22,8 +21,8 @@ const PasswordForm = () => {
     const validationSchema=Yup.object({
 
         oldPassword:Yup.string().required("Please re-enter your password"),
-        newPassword:Yup.string().required("Please enter your new password").
-            min(8 , "At least 8 characters").matches(/[a-z]+/, "").matches(/[A-Z]+/, "At least one uppercase")
+        newPassword:Yup.string().required("Please enter your new password")
+            .min(8 , "At least 8 characters").matches(/[a-z]+/, "").matches(/[A-Z]+/, "At least one uppercase")
             .matches(/\d+/ , "At least one digit"),
         passwordConfirm:Yup.string().required("Please re-enter your new password").oneOf([Yup.ref("newPassword")] , "Passwords must be same!"),
         

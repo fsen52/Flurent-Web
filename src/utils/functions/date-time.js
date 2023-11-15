@@ -4,6 +4,7 @@ export const combineDateTime = (date,time) => {
     return moment(`${date} ${time}`).format("DD/MM/YYYY HH:mm:ss");
  }
 
+
 export const checkExpireDate = (expireDate) => {
     if(!expireDate) return false;
     if(expireDate.includes("_")) return false; 
@@ -19,6 +20,10 @@ export const getCurrentDate = () => {
 
 export const getDate = (dateTime) => {
     return moment(dateTime).format("YYYY-MM-DD");
+}
+
+export const getTime = (dateTime) => {
+    return moment(dateTime).format("HH:mm");
 }
 
 export const checkDates = (dates) => {

@@ -6,7 +6,7 @@ import Loading from '../../../common/loading/loading';
 import VehicleBar from './vehicle-bar';
 import PopularVehicle from './popular-vehicle';
 import Spacer from '../../../common/spacer/spacer';
-import PasswordInput from '../../common/auth/password-input';
+
 
 const PopularVehicles = () => {
 

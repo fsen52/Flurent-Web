@@ -12,7 +12,6 @@ import UnauthorizedPage from "../pages/common/unauthorized-page";
 import AuthPage from "../pages/users/auth-page";
 import ProfilePage from "../pages/users/profile-page";
 import ProtectedRoute from "./protected-route";
-import LoadingPage from "../pages/common/loading-page";
 import ReservationsPage from "../pages/users/reservations-page";
 import ReservationDetailsPage from "../pages/users/reservation-details-page";
 import ScrollToTop from "../components/common/scroll-to-top/scroll-to-top";
@@ -23,6 +22,10 @@ import AdminUserEditPage from "../pages/admins/admin-user-edit-page";
 import AdminVehiclesPage from "../pages/admins/admin-vehicles-page";
 import AdminVehicleEditPage from "../pages/admins/admin-vehicle-edit-page";
 import AdminVehicleNewPage from "../pages/admins/admin-vehicle-new-page";
+import AdminReservationsPage from "../pages/admins/admin-reservations-page";
+import AdminReservationEditPage from "../pages/admins/admin-reservation-edit-page";
+import AdminContactMessagesPage from "../pages/admins/admin-contact-messages-page";
+import AdminContactMessageEditPage from "../pages/admins/admin-contact-message-edit-page";
 const CustomRoutes = () => {
   return (
     <BrowserRouter>
@@ -58,7 +61,14 @@ const CustomRoutes = () => {
                   <Route index element={<ProtectedRoute admin={true}><AdminTemplate><AdminVehiclesPage/></AdminTemplate></ProtectedRoute>}/>
                   <Route path=":vehicleId" element={<ProtectedRoute admin={true}><AdminTemplate><AdminVehicleEditPage/></AdminTemplate></ProtectedRoute>}/>
                   <Route path="new" element={<ProtectedRoute admin={true}><AdminTemplate><AdminVehicleNewPage/></AdminTemplate></ProtectedRoute>}/>   
-
+              </Route>
+              <Route path="reservations">
+                  <Route index element={<ProtectedRoute admin={true}><AdminTemplate><AdminReservationsPage/></AdminTemplate></ProtectedRoute>}/>
+                  <Route path=":reservationId" element={<ProtectedRoute admin={true}><AdminTemplate><AdminReservationEditPage/></AdminTemplate></ProtectedRoute>}/>
+              </Route>
+              <Route path="contact-messages">
+                  <Route index element={<ProtectedRoute admin={true}><AdminTemplate><AdminContactMessagesPage/></AdminTemplate></ProtectedRoute>}/>
+                  <Route path=":messageId" element={<ProtectedRoute admin={true}><AdminTemplate><AdminContactMessageEditPage/></AdminTemplate></ProtectedRoute>}/>
               </Route>
           </Route>
 

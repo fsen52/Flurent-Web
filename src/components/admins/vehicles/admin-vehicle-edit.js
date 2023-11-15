@@ -168,6 +168,7 @@ const AdminVehicleEdit = () => {
   return  loading ? ( <Loading/> ) : (
     
     <Form noValidate onSubmit={formik.handleSubmit} >
+        <fieldset disabled={initialValues.builtIn}>
         <Row>
             <Col xl={3} className='image-area' >
 
@@ -307,7 +308,7 @@ const AdminVehicleEdit = () => {
             </Col>
 
         </Row>
-
+        </fieldset>
         {initialValues.builtIn && (
             <Alert variant='danger'>Build-in vehicles can not be deleted and updated</Alert>
         )}

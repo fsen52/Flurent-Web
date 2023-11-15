@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import {FiPhoneCall} from "react-icons/fi";
 import {HiOutlineLocationMarker, HiOutlineMailOpen} from "react-icons/hi";
 import { settings } from '../../../utils/settings';

@@ -5,7 +5,6 @@ import ReactInputMask from 'react-input-mask-next'
 import * as Yup from "yup"
 import { updateUser } from '../../../api/user-service'
 import { toast } from '../../../utils/functions/swal'
-import { userUpdate } from '../../../store/slices/auth-slice'
 
 const ProfileForm = ({user}) => {
 
@@ -23,8 +22,8 @@ const ProfileForm = ({user}) => {
     const validationSchema=Yup.object({
         firstName:Yup.string().required("Isminizi giriniz"),
         lastName:Yup.string().required("Soyadinizi giriniz"),
-        phoneNumber:Yup.string().required().
-            test("includes_", "Please enter your phone number",
+        phoneNumber:Yup.string().required()
+            .test("includes_", "Please enter your phone number",
             (value)=> value && !value.includes("_")),
         address:Yup.string().required("Adresinizi giriniz"),
         zipCode:Yup.string().required("-Zip code giriniz"),

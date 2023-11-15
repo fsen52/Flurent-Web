@@ -33,7 +33,7 @@ const LoginForm = () => {
             secureLocalStorage.setItem("token",respAuth.data.token)
             const respUser = await getUser();
             dispatch(loginSuccess(respUser.data))
-            navigate(-1);
+            navigate("/");
 
         } catch (err) {
             toast("error", err.response.data.message)

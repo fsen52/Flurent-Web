@@ -116,7 +116,7 @@ const AdminUserEdit = () => {
     (
 
     <Form noValidate onSubmit={formik.handleSubmit}>
-
+        <fieldset disabled={initialValues.builtIn}>
         <Row>
 
         <Form.Group as={Col} md={6} lg={4} className="mb-3" >
@@ -204,7 +204,7 @@ const AdminUserEdit = () => {
         </Form.Group>
        
         </Row>
-
+        </fieldset>
         {initialValues.builtIn && (
             <Alert variant='danger'>Build-in account can not be deleted and updated</Alert>
         )}

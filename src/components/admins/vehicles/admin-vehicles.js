@@ -7,6 +7,7 @@ import DataTable from "react-data-table-component";
 import Loading from "../../common/loading/loading";
 
 const columns = [
+ 
     {
         name: 'Car Name',
         selector: row => row.model,
@@ -90,6 +91,7 @@ const AdminVehicles = () => {
     
             loadData(0);
             
+          // eslint-disable-next-line react-hooks/exhaustive-deps
           }, [ ])
 
 
@@ -144,6 +146,7 @@ const AdminVehicles = () => {
           onChangeRowsPerPage={handlePerRowsChange}
           onChangePage={handlePageChange} 
     onRowClicked={handleRowClick}
+    pointerOnHover={true}
     />
 
   </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Table } from 'react-bootstrap'
-import { getReservation, getReservations } from '../../../api/reservation-service';
+import { getReservations } from '../../../api/reservation-service';
 import Loading from '../../common/loading/loading';
 import { formatDateTimeLLL } from '../../../utils/functions/date-time';
 import { useNavigate } from 'react-router-dom';

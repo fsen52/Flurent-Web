@@ -8,6 +8,7 @@ import Loading from '../../common/loading/loading';
 import { useNavigate } from 'react-router-dom';
 
 const columns = [
+ 
   {
       name: 'First Name',
       selector: (row) => row.firstName,

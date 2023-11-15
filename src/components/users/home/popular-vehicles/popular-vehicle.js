@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./popular-vehicle.scss";
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import { settings } from '../../../../utils/settings';
+
 import {RiGasStationFill, RiCarLine, RiCaravanLine} from "react-icons/ri";
 import {IoIosSnow} from "react-icons/io";
 import {MdOutlineAirlineSeatReclineExtra} from "react-icons/md";
@@ -40,6 +40,7 @@ const PopularVehicle = (props) => {
    useEffect(() => {
      loadImage()
    
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [activeVehicle])
    
   return ( 

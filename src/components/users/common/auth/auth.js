@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./auth.scss";
-import { Card, Col, Container, Image, Row, Tab, Tabs } from 'react-bootstrap';
+import { Card, Col, Container, Row, Tab, Tabs } from 'react-bootstrap';
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import logo from "../../../../assets/img/logo/logo.png";
 import { RiCloseCircleLine, RiHome7Line } from 'react-icons/ri'

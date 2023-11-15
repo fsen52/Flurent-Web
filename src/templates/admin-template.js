@@ -5,7 +5,7 @@ import Sidebar from "../components/admins/common/sidebar/sidebar";
 const AdminTemplate = (props) => {
   const { children } = props;
   return (
-    <Container fluid style={{padding:0}}>
+    <Container fluid className="p-0 overflow-hidden">
       <Row>
         <Col lg={3}>
           <Sidebar />

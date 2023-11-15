@@ -6,6 +6,12 @@
         @include m.flexbox(row, space-between, center, 0);
     }
 
+    .card{
+        img{
+            border-radius: 2rem;
+        }
+    }
+
     ul{
         @include m.reset-list();
         @include m.flexbox(row, space-between, center, 2rem);

@@ -1,7 +1,12 @@
 import React from "react";
+import AdminContactMessageEdit from "../../components/admins/contact-messages/admin-contact-message-edit";
 
 const AdminContactMessageEditPage = () => {
-  return <div>AdminContactMessageEditPage</div>;
+  return (
+    <>
+      <AdminContactMessageEdit/>
+    </>
+    );
 };
 
 export default AdminContactMessageEditPage;

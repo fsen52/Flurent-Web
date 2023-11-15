@@ -26,7 +26,7 @@ const VehicleDetails = () => {
           <h3><Badge bg="primary">${pricePerHour}/hour</Badge></h3> 
         </div>
         <Card>
-          <img src={getVehicleImage(image)} alt='car' className='img-fluid'/>
+          <img src={getVehicleImage(image)} alt={model} className='img-fluid'/>
         </Card>
         <Spacer height={30}/>
         <h2>Property Highlights</h2>
